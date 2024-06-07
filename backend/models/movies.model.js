@@ -11,9 +11,6 @@ const moviesSchema = new mongoose.Schema({
   rating: {
     type: Number,
   },
-  description: {
-    type: String,
-  },
 });
 
 const moviesModel = mongoose.model("movies", moviesSchema);

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const addMovie = async (req, res) => {
-  const { movie_name, info, rating, description } = req.body;
+  const { movie_name, info, rating } = req.body;
   const moviesModel = mongoose.model("movies");
 
   if (!movie_name) throw "Movie name is required field";
@@ -13,7 +13,6 @@ const addMovie = async (req, res) => {
     movie_name: movie_name,
     info: info,
     rating: rating,
-    description: description,
   });
 
   res.status(200).json({
