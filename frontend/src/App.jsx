@@ -51,12 +51,18 @@ function App() {
   };
 
   return (
-    <div className="app-container">
-      <h1>Movies Recommendation App</h1>
+    <>
+    <div className="container">
+      <h1 className="">Movies Recommendation App</h1>
+      <div className="list-container">
+        <AddMovie onSave={handleSave} />
+      </div>
+      <div className=" form-control">
+        <ListMovie movies={movies} onDelete={handleDelete} />
+      </div>
       {error && <div className="error">{error}</div>}
-      <AddMovie onSave={handleSave} />
-      <ListMovie movies={movies} onDelete={handleDelete} />
     </div>
+    </>
   );
 }
 
