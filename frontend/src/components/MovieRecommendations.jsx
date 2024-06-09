@@ -4,7 +4,7 @@ import "./MovieRecommendations.css";
 function MovieRecommendations() {
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(false);
-//   const [error, setError] = useState(null);
+  //   const [error, setError] = useState(null);
 
   const fetchRecommendations = async () => {
     setLoading(true);
@@ -20,14 +20,14 @@ function MovieRecommendations() {
           setRecommendations(data.data.recommendations);
         } else {
           console.error("Failed to fetch recommendations:", data.message);
-        //   setError(data.message || "Failed to fetch recommendations");
+          //   setError(data.message || "Failed to fetch recommendations");
         }
         setLoading(false);
       }, 1000); // Delay of 1 second
     } catch (error) {
-        console.error("Error fetching recommendations:", error);
-        // setError("Error fetching recommendations");
-        setLoading(false);
+      console.error("Error fetching recommendations:", error);
+      // setError("Error fetching recommendations");
+      setLoading(false);
     }
   };
 
@@ -43,7 +43,7 @@ function MovieRecommendations() {
       {recommendations.length > 0 && (
         <div className="recommendations-list">
           <div className="header">
-          <h2>Recommended Movies</h2>
+            <h2>Recommended Movies</h2>
           </div>
           <ul>
             {recommendations.map((recommendation, index) => (
