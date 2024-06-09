@@ -12,7 +12,7 @@ function MovieRecommendations() {
     // setError(null);
 
     try {
-      const response = await fetch("/api/movies/openai/movieRecommendation");
+      const response = await fetch("/api/movies/gemini/movieRecommendation");
       const data = await response.json();
       console.log(data);
       setTimeout(() => {

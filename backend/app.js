@@ -39,7 +39,7 @@ app.patch("/api/movies", editMovies);
 app.delete("/api/movies/:movie_id", deleteMovie);
 
 // OpenAI Suggestions
-app.get("/api/movies/openai/movieRecommendation", moviesRecommendation);
+app.get("/api/movies/gemini/movieRecommendation", moviesRecommendation);
 
 // Handle errors...
 app.use(errorHandler);
