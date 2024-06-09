@@ -1,0 +1,44 @@
+.recommendations-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.recommendations-list {
+  margin-top: 20px;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 800;
+  margin-bottom: 0px;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.recommendation-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 4px 2px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}

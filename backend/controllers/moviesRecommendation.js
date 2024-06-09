@@ -78,39 +78,48 @@ const moviesRecommendation = async (req, res) => {
   const moviesString = allMovies.map((el) => el.movie_name).join(", ");
 
   // Step 2: Format the prompt for the AI model
-  const query = `I need a movie recommendation based on these movies: ${moviesString}. With little info also provide me with 10 suggestions!. align data in points and description should be of one line only.`;
+  const query = `I need a movie recommendation based on these movies: ${moviesString}. Provide 10 suggestions with a title and a one-line description. Include an index for each suggestion in the following format:
+  
+  "recommendations": [
+    {
+      "index": 1,
+      "title": "Movie Title",
+      "description": "Movie description"
+    },
+    {
+      "index": 2,
+      "title": "Movie Title",
+      "description": "Movie description"
+    },
+    ...
+  ]`;
 
-  await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 5 seconds before checking again
+  await new Promise((resolve) => setTimeout(resolve, 500)); // Wait for 5 seconds before checking again
   // Configure the AI model
   const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
   });
 
-  // Generate the content using the AI model
-  const result = await model.generateContent({
-    contents: [{ parts: [{ text: query }] }],
-    generationConfig: { response_mime_type: "application/json" },
-  });
-
-  const response = await result.response;
-
-  // Handle the response
-  let recommendations;
   try {
-    recommendations = JSON.parse(response.text());
+    const result = await model.generateContent({
+      contents: [{ parts: [{ text: query }] }],
+      generationConfig: { response_mime_type: "application/json" },
+    });
+
+    const response = await result.response;
+    const recommendations = JSON.parse(response.text());
+
+    res.status(200).json({
+      status: "success",
+      data: recommendations,
+    });
   } catch (error) {
-    return res.status(500).json({
+    res.status(500).json({
       status: "error",
-      message: "Failed to parse AI response",
+      message: "Failed to fetch recommendations from AI",
       error: error.message,
     });
   }
-  console.log(recommendations);
-
-  res.status(200).json({
-    status: "success",
-    recommendations: recommendations,
-  });
 };
 
 module.exports = moviesRecommendation;

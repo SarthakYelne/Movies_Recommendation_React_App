@@ -5,7 +5,7 @@ const getAllMovies = async (req, res) => {
 
   try {
     const moviesData = await moviesModel.find({});
-    console.log(moviesData);
+    // console.log(moviesData);
 
     // Validate that the data is an array
     if (!Array.isArray(moviesData)) {

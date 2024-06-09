@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ListMovie from "./components/ListMovie";
 import AddMovie from "./components/AddMovie";
+import MovieRecommendations from "./components/MovieRecommendations";
 import "./App.css";
 
 function App() {
@@ -52,16 +53,19 @@ function App() {
 
   return (
     <>
-    <div className="container">
-      <h1 className="">Movies Recommendation App</h1>
-      <div className="list-container">
-        <AddMovie onSave={handleSave} />
+      <div className="container">
+        <h1>Movies Recommendation App</h1>
+        {error && <div className="error">{error}</div>}
+        <div className="list-container">
+          <AddMovie onSave={handleSave} />
+        </div>
+        <div className="form-control">
+          <ListMovie movies={movies} onDelete={handleDelete} />
+        </div>
+        <div>
+          <MovieRecommendations />
+        </div>
       </div>
-      <div className=" form-control">
-        <ListMovie movies={movies} onDelete={handleDelete} />
-      </div>
-      {error && <div className="error">{error}</div>}
-    </div>
     </>
   );
 }

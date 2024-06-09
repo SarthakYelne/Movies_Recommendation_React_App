@@ -1,12 +1,11 @@
 .container {
 
   display: grid;
-  margin: 0.5rem;
+  /* margin: 0.5rem; */
   padding: 0;
   justify-content: center;
   text-align: center;
   align-items: center;
-  /* height: 0vh; */
   width: 100vw;
   }
   
@@ -16,7 +15,7 @@
   font-weight: 550;
   margin-bottom: 10px;
   align-content: center;
-  color: #3e66ea;
+  color: #007bff;
 }
 
 .error {
@@ -30,8 +29,6 @@
   margin-bottom: 8px;
   border: #fff;
   text-shadow: #fff;
-  /* background-color: rgb(39, 39, 39); */
-  /* border: 1px solid black; */
 }
 
 button {
