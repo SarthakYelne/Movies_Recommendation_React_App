@@ -1,6 +1,6 @@
-require("express-async-errors");
-
 const express = require("express");
+require("express-async-errors");
+const cors = require("cors");
 
 const mongoose = require("mongoose");
 
@@ -27,6 +27,7 @@ mongoose
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // Models...
 require("./models/movies.model");
@@ -44,7 +45,9 @@ app.get("/api/movies/gemini/movieRecommendation", moviesRecommendation);
 // Handle errors...
 app.use(errorHandler);
 
+const port = process.env.PORT || 8000;
+
 // localhost:8000 listning...
-app.listen(8000, () => {
-  console.log("Server started successfully!");
+app.listen(port, () => {
+  console.log(`Server started successfully on : http://localhost:${port}`);
 });
