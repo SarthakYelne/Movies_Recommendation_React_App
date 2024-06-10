@@ -2,14 +2,6 @@ const express = require("express");
 require("express-async-errors");
 const cors = require("cors");
 
-app.use(
-  cors({
-    origin: [""],
-    methods: ["POST", "GET", "DELETE"],
-    credentials: true,
-  })
-);
-
 const mongoose = require("mongoose");
 
 const addMovie = require("./controllers/addMovie");
@@ -34,6 +26,14 @@ mongoose
   });
 
 const app = express();
+app.use(
+  cors({
+    origin: [""],
+    methods: ["POST", "GET", "DELETE"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 app.use(cors());
 
