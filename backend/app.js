@@ -41,6 +41,9 @@ app.use(cors());
 require("./models/movies.model");
 
 // Routes...
+app.get("/", (req, res) => {
+  res.json("deployed...");
+});
 app.post("/api/movies", addMovie);
 app.get("/api/movies", getAllMovies);
 app.get("/api/movies/:movie_id", getSingleMovie);
