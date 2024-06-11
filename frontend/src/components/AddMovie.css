@@ -10,7 +10,7 @@
 
 h2 {
   text-align: center;
-  color: #ffffff;
+  color: #2a47ed;
 }
 
 .mb-3 {
@@ -45,13 +45,13 @@ label {
   border: none;
   border-radius: 4px;
   background-color: #ecdfdd;
-  color: #ea7933;
+  color: #8ce073;
   cursor: auto;
   /* transition: background-color 0.3s; */
 }
 
 .btn-primary:hover {
-  background-color: #df4710;
+  background-color: #5cb352;
 }
 
 @media (max-width: 768px) {
