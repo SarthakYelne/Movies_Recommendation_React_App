@@ -9,9 +9,9 @@ function ListMovie({ movies, onDelete }) {
       {movies.length === 0 ? (
         <p>No movies available</p>
       ) : (
-        <ul className="movies-list">
+        <div className="movies-grid">
           {movies.map((movie) => (
-            <li key={movie._id} className="movie-item">
+            <div key={movie._id} className="movie-card">
               <h2>{movie.movie_name}</h2>
               <p>{movie.info}</p>
               <p>Rating: {movie.rating}</p>
@@ -22,9 +22,9 @@ function ListMovie({ movies, onDelete }) {
               >
                 Delete
               </button>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );

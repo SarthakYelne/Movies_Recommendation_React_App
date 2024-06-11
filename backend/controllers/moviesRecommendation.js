@@ -66,10 +66,10 @@ const moviesRecommendation = async (req, res) => {
 
   const allMovies = await moviesModel.find({});
 
-  if (allMovies.length < 2) {
+  if (allMovies.length < 1) {
     res.status(400).json({
       status: "failed",
-      message: "Atleast two movies required",
+      message: "Atleast one movie required",
     });
     return;
   }
