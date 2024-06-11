@@ -15,13 +15,13 @@ Check out the live demo of the application [here](https://movies-react-app.onren
 
 ## Screenshots
 
-![Movie Form](./screenshots/home_page.png)
-*Add Movie*
+![Movie Form](./img/ss1.jpg)
+*Movie Form*
 
-![Movie List](./screenshots/add_movie.png)
-* List*
+![Movie List](./img/ss2.jpg)
+*Movie List*
 
-![Movie Details](./screenshots/movie_details.png)
+![Movie Details](./img/ss3.jpg)
 *Movie Suggestions*
 
 ## Getting Started
