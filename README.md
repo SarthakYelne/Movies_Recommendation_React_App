@@ -15,14 +15,14 @@ Check out the live demo of the application [here](https://movies-react-app.onren
 
 ## Screenshots
 
-*Movie Form*
-<img src="./img/ss1.png" alt="movie form" width="166" height="75" >
+### *Movie Form*
+<img src="./img/ss1.png" alt="movie form" width="950" height="370" >
 
-*Movie List*
-<img src="./img/ss2.png" alt="movie list" width="166" height="75" >
+### *Movie List*
+<img src="./img/ss2.png" alt="movie list" width="950" height="370" >
 
-*Movie Suggestions*
-<img src="./img/ss3.png" alt="movie suggestions" width="166" height="75" >
+### *Movie Suggestions*
+<img src="./img/ss3.png" alt="movie suggestions" width="950" height="370" >
 
 ## Getting Started
 
