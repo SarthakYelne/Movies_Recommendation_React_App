@@ -15,11 +15,11 @@ Check out the live demo of the application [here](https://movies-react-app.onren
 
 ## Screenshots
 
-![Home Page](./screenshots/home_page.png)
+![Movie Form](./screenshots/home_page.png)
 *Add Movie*
 
-![Add Movie](./screenshots/add_movie.png)
-*Movies List*
+![Movie List](./screenshots/add_movie.png)
+* List*
 
 ![Movie Details](./screenshots/movie_details.png)
 *Movie Suggestions*
