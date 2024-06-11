@@ -26,16 +26,15 @@ mongoose
   });
 
 const app = express();
+app.use(express.json());
+// app.use(cors());
 app.use(
   cors({
-    origin: [""],
+    origin: ["https://movies-react-app.onrender.com"],
     methods: ["POST", "GET", "DELETE"],
     credentials: true,
   })
 );
-
-app.use(express.json());
-app.use(cors());
 
 // Models...
 require("./models/movies.model");
