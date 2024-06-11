@@ -22,13 +22,16 @@ function AddMovie({ onSave }) {
     event.preventDefault();
 
     try {
-      const response = await fetch("https://movies-recommendation-react-app.onrender.com/api/movies", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(movie),
-      });
+      const response = await fetch(
+        "https://movies-recommendation-react-app.onrender.com/api/movies",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(movie),
+        }
+      );
 
       if (response.ok) {
         onSave();
@@ -58,6 +61,7 @@ function AddMovie({ onSave }) {
             className="form-control"
             onChange={handleChange}
             value={movie.movie_name}
+            placeholder="Enter movie name"
           />
         </div>
         <div className="mb-3">
@@ -68,6 +72,7 @@ function AddMovie({ onSave }) {
             className="form-control"
             onChange={handleChange}
             value={movie.info}
+            placeholder="Enter movie info"
           />
         </div>
         <div className="mb-3">
@@ -78,6 +83,7 @@ function AddMovie({ onSave }) {
             className="form-control"
             onChange={handleChange}
             value={movie.rating}
+            placeholder="Enter movie rating"
           />
         </div>
         <div className="mb-3">

@@ -38,7 +38,9 @@ const editMovies = async (req, res) => {
   const { movie_name, info, rating, description } = req.body;
 
   if (!movie_id) {
-    return res.status(400).json({ status: 'error', message: 'Movie id is required.' });
+    return res
+      .status(400)
+      .json({ status: "error", message: "Movie id is required." });
   }
 
   try {
