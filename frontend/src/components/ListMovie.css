@@ -10,7 +10,7 @@
 
 h1 {
   text-align: center;
-  color: #ff6347;
+  color: #ffffff;
 }
 
 .counter {
@@ -42,7 +42,7 @@ h1 {
 
 .movie-card h2 {
   margin: 0 0 10px 0;
-  color: #ff6347;
+  color: #5d5c5c;
 }
 
 .movie-card p {
