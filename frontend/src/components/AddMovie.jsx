@@ -22,7 +22,7 @@ function AddMovie({ onSave }) {
     event.preventDefault();
 
     try {
-      const response = await fetch("/api/movies", {
+      const response = await fetch("https://movies-recommendation-react-app.onrender.com/api/movies", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

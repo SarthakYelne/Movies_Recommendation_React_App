@@ -4,6 +4,8 @@ import AddMovie from "./components/AddMovie";
 import MovieRecommendations from "./components/MovieRecommendations";
 import "./App.css";
 
+const API_URL = "https://movies-recommendation-react-app.onrender.com";
+
 function App() {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
@@ -14,7 +16,7 @@ function App() {
 
   const fetchMovies = async () => {
     try {
-      const response = await fetch("/api/movies");
+      const response = await fetch(API_URL + `/api/movies`);
       const data = await response.json();
 
       if (!response.ok) {
@@ -37,7 +39,7 @@ function App() {
 
   const handleDelete = async (movieId) => {
     try {
-      const response = await fetch(`/api/movies/${movieId}`, {
+      const response = await fetch(API_URL + `/api/movies/${movieId}`, {
         method: "DELETE",
       });
 
