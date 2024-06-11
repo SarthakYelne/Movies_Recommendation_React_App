@@ -13,14 +13,14 @@
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #5af864e8;
+  background-color: #2db836e8;
   color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #ff4500;
+  background-color: #43873b;
 }
 
 .recommendations-list {
@@ -47,7 +47,7 @@
 
 .recommendation-item h3 {
   margin: 0 0 10px 0;
-  color: #ffffff;
+  color: #341ef5e6;
 }
 
 .recommendation-item p {
